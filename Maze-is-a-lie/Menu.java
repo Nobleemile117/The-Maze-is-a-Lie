@@ -17,7 +17,7 @@ public class Menu extends World
      */
     public Menu()
     {
-        super(800, 600, 1);
+        super(800, 450, 1);
         preparamundo();
     }
 
