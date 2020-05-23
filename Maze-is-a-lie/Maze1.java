@@ -24,14 +24,14 @@ import java.io.*;
         public Maze1()
         {    
             // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-            super(800, 600, 1);
+            super(770, 630, 1);
             createMaze();
-            addObject(chell, 400, 300);
+            addObject(chell, 385, 315);
             addObject(uhr, 50, 50);
         }
         
         public void act(){
-            createMaze();
+            //createMaze();
             theme2.play();
             timer++;
             if(timer==60){
@@ -50,25 +50,25 @@ import java.io.*;
             try(FileReader fileReader = new FileReader("Maze1.txt"))
             {
                     int caracterLeido = fileReader.read();
-                    while(caracterLeido != 90){    
+                    while(caracterLeido != -1){    
                         switch(caracterLeido){
-                            case 97:
+                            case 1:
                                 addObject(esI,punterox,punteroy);
                                 punterox+=35;
                                 break;
                             
-                            case 98:
+                            case 2:
                                 addObject(new paredhorizontalSuperior(),punterox,punteroy);
                                 punterox+=35;
                                 break;
                             
-                            case 99:
+                            case 3:
                                 addObject(new esquinasuperiorderecha(),punterox,punteroy);
                                 punterox=0;
                                 punteroy+=35;
                                 break;
                         }
-                        System.out.println(caracterLeido);
+                        //System.out.println(caracterLeido);
                         caracterLeido = fileReader.read();
                     }
                     fileReader.close();
