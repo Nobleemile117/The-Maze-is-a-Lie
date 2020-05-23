@@ -26,11 +26,14 @@ public class Menu extends World
      */
     private void preparamundo()
     {
-        addObject( new  Jugar(), 400, 150);
+        
+        addObject( new Title(), 400, 100);
+        
+        addObject( new  Jugar(), 400, 250);
         
         addObject( new  Salir(), 400, 350);
         
-        addObject(puntero, 165, 150);
+        addObject(puntero, 165, 250);
     }
 
     /**
@@ -56,7 +59,7 @@ public class Menu extends World
             opcion = 1;
         }
         
-        puntero.setLocation(165, 150 + (opcion * 200));
+        puntero.setLocation(165, 250 + (opcion * 100));
         
         if (Greenfoot.isKeyDown("SPACE") || Greenfoot.isKeyDown("ENTER")) {
             switch (opcion) {
