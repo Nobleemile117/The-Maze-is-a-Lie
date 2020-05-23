@@ -1,6 +1,6 @@
 
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
- import java.io.*;
+import java.io.*;
 /**
  * Write a description of class Maze1 here.
  * 
@@ -16,6 +16,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
         private Stopwatch uhr = new Stopwatch();
         private int timer = 0;
         private int timer2 =0;
+        private esquinasuperiorIzquierda esI = new esquinasuperiorIzquierda();
         /**
          * Constructor for objects of class Maze1.
          * 
@@ -30,59 +31,52 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
         }
         
         public void act(){
-        createMaze();
-        theme2.play();
-         timer++;
-        if(timer==60){
-        timer2++;
-        timer=0;
-        }
-        uhr.updateStopwatch(timer2);
-
+            createMaze();
+            theme2.play();
+            timer++;
+            if(timer==60){
+                timer2++;
+                timer=0;
+            }
+            uhr.updateStopwatch(timer2);
         }
         
-        public void createMaze(){
-            File file = new File("Maze1.txt");
+        public void createMaze()
+        {
             
-            FileReader fileR = null;
-            BufferedReader file2 = null;
             int punterox=0;
             int punteroy=0;
             
-            try {
-                fileR = new FileReader(file);
-                file2 = new BufferedReader(fileR);
-                
-            }catch (FileNotFoundException e) {
-                System.out.println("No se encontro el archivo "+file.getName());
-            }
-            
-            try{
-                while(file2.readLine() != null)
-                {
-                    int line = file2.read();
-                    switch(line){
-                        case 1:
-                            addObject(new esquinasuperiorIzquierda(),punterox,punteroy);
-                            punterox+=35;
-                            break;
-                        
-                        case 2:
-                            addObject(new paredhorizontalSuperior(),punterox,punteroy);
-                            punterox+=35;
-                            break;
-                        
-                        case 3:
-                            addObject(new esquinasuperiorderecha(),punterox,punteroy);
-                            punterox=0;
-                            punteroy+=35;
-                            break;
+            try(FileReader fileReader = new FileReader("Maze1.txt"))
+            {
+                    int caracterLeido = fileReader.read();
+                    while(caracterLeido != 90){    
+                        switch(caracterLeido){
+                            case 97:
+                                addObject(esI,punterox,punteroy);
+                                punterox+=35;
+                                break;
+                            
+                            case 98:
+                                addObject(new paredhorizontalSuperior(),punterox,punteroy);
+                                punterox+=35;
+                                break;
+                            
+                            case 99:
+                                addObject(new esquinasuperiorderecha(),punterox,punteroy);
+                                punterox=0;
+                                punteroy+=35;
+                                break;
+                        }
+                        System.out.println(caracterLeido);
+                        caracterLeido = fileReader.read();
                     }
-                    System.out.println(line);
+                    fileReader.close();
+                }catch(IOException ex){
+                    System.err.println("Error al leer el archivo");
+                    ex.printStackTrace();
                 }
-            }catch(IOException e){
-                    e.printStackTrace();
             }
     }
-}
+    
    
