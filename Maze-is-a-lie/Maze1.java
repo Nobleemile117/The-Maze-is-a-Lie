@@ -16,7 +16,7 @@ import java.io.*;
         private Stopwatch uhr = new Stopwatch();
         private int timer = 0;
         private int timer2 =0;
-        private esquinasuperiorIzquierda esI = new esquinasuperiorIzquierda();
+        
         /**
          * Constructor for objects of class Maze1.
          * 
@@ -41,8 +41,9 @@ import java.io.*;
             uhr.updateStopwatch(timer2);
         }
         
+        /*
         public void createMaze()
-        {
+        {   
             
             int punterox=0;
             int punteroy=0;
@@ -50,10 +51,10 @@ import java.io.*;
             try(FileReader fileReader = new FileReader("Maze1.txt"))
             {
                     int caracterLeido = fileReader.read();
-                    while(caracterLeido != -1){    
-                        switch(caracterLeido){
+                    while(caracterLeido != -1){
+                            switch(caracterLeido){
                             case 1:
-                                addObject(esI,punterox,punteroy);
+                                addObject(new esquinasuperiorIzquierda(),punterox,punteroy);
                                 punterox+=35;
                                 break;
                             
@@ -68,7 +69,6 @@ import java.io.*;
                                 punteroy+=35;
                                 break;
                         }
-                        //System.out.println(caracterLeido);
                         caracterLeido = fileReader.read();
                     }
                     fileReader.close();
@@ -76,7 +76,29 @@ import java.io.*;
                     System.err.println("Error al leer el archivo");
                     ex.printStackTrace();
                 }
-            }
+            
+        }
+        */
+       
+       public void createMaze(){
+           int punterox=0;
+           int punteroy=0;
+
+               addObject(new esquinasuperiorIzquierda(),punterox,punteroy);
+               punterox+=35;
+               while(punterox<=735){
+                   addObject(new paredHorizontalSuperior(),punterox,punteroy);
+                   punterox+=35;
+               }
+               addObject(new esquinasuperiorderecha(),punterox,punteroy);
+               punterox=0;
+               punteroy=+35;
+               addObject(new paredVerticalIzquierda(),punterox,punteroy);
+               punterox+=35;
+               
+       }
+       
+           
     }
     
    
