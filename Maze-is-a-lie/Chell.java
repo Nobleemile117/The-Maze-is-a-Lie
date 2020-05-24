@@ -46,13 +46,13 @@ public class Chell extends Actor
         setRotation(0);
         setLocation(getX()-5,getY());
         if(isTouching(esquinaInferiorUniversalIzquierda.class||esquinaInferiorUniversalDerecha.class ||esquinaSuperiorUniversalDerecha.class||esquinaSuperiorUniversalIzquierda.class||esquinainferiorDerecha.class||esquinainferiorizquierda.class||esquinasuperiorIzquierda.class||esquinasuperiorderecha.class||interseccionDerecha.class||interseccionInferior.class||interseccionIzquierda.class|| esquinaInferiorUniversalIzquierda.class||interseccionSuperior.class||interseccionUniversal.class||paredHorizontal.class||paredHorizontalInferior.class||paredHorizontalSuperior.class||paredVertical.class||paredVerticalDerecha.class||paredVerticalIzquierda.class )){
-        setLocation(getX(),getY()-5);}
+        setLocation(getX()+5,getY());}
         break;
          case 3:
         setRotation(0);
         setLocation(getX()+5,getY());
         if(isTouching(esquinaInferiorUniversalDerecha.class||esquinaInferiorUniversalIzquierda.class||esquinaSuperiorUniversalDerecha.class||esquinaSuperiorUniversalIzquierda.class||esquinainferiorDerecha.class||esquinainferiorizquierda.class||esquinasuperiorIzquierda.class||esquinasuperiorderecha.class||interseccionDerecha.class||interseccionInferior.class||interseccionIzquierda.class|| esquinaInferiorUniversalIzquierda.class||interseccionSuperior.class||interseccionUniversal.class||paredHorizontal.class||paredHorizontalInferior.class||paredHorizontalSuperior.class||paredVertical.class||paredVerticalDerecha.class||paredVerticalIzquierda.class )){
-        setLocation(getX(),getY()-5);}
+        setLocation(getX()-5,getY()-5);}
         break;
     }
     
