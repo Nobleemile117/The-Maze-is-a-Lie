@@ -29,23 +29,6 @@ class.portalRojo.image=Portal\ rojo\ chiquito.png
 dependency1.from=Maze1
 dependency1.to=Chell
 dependency1.type=UsesDependency
-<<<<<<< HEAD
-dependency10.from=Chell
-dependency10.to=esquinainferiorDerecha
-dependency10.type=UsesDependency
-dependency11.from=Chell
-dependency11.to=esquinainferiorizquierda
-dependency11.type=UsesDependency
-dependency12.from=Chell
-dependency12.to=esquinasuperiorIzquierda
-dependency12.type=UsesDependency
-dependency13.from=Chell
-dependency13.to=esquinasuperiorderecha
-dependency13.type=UsesDependency
-dependency2.from=Maze1
-dependency2.to=Stopwatch
-dependency2.type=UsesDependency
-=======
 dependency10.from=Menu
 dependency10.to=Maze1
 dependency10.type=UsesDependency
@@ -109,7 +92,6 @@ dependency28.type=UsesDependency
 dependency29.from=Chell
 dependency29.to=paredVerticalIzquierda
 dependency29.type=UsesDependency
->>>>>>> 72164b8ab4bead854b85fb7f6e0d7eed2583bc40
 dependency3.from=Maze1
 dependency3.to=esquinasuperiorIzquierda
 dependency3.type=UsesDependency
@@ -131,21 +113,12 @@ dependency8.type=UsesDependency
 dependency9.from=Menu
 dependency9.to=Salir
 dependency9.type=UsesDependency
-<<<<<<< HEAD
 editor.fx.0.height=744
 editor.fx.0.width=1382
 editor.fx.0.x=-8
 editor.fx.0.y=-8
 height=744
-package.numDependencies=13
-=======
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=552
-editor.fx.0.y=100
-height=1056
 package.numDependencies=29
->>>>>>> 72164b8ab4bead854b85fb7f6e0d7eed2583bc40
 package.numTargets=30
 project.charset=UTF-8
 publish.hasSource=false
