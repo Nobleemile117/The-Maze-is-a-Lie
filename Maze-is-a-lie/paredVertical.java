@@ -6,11 +6,11 @@ import greenfoot.*;
 /**
  * 
  */
-public class paredHorizontalSuperior extends Actor
+public class paredVertical extends Actor
 {
 
     /**
-     * Act - do whatever the paredHorizontalSuperior wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the paredVertical wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {

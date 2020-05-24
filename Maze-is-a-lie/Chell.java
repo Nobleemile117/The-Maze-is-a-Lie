@@ -33,19 +33,26 @@ public class Chell extends Actor
         case 0:
         setRotation(270);
         setLocation(getX(),getY()-5);
-       // if(isTouching())
+        if(isTouching(esquinaInferiorUniversalDerecha.class || esquinaInferiorUniversalIzquierda.class||esquinaSuperiorUniversalDerecha.class||esquinaSuperiorUniversalIzquierda.class||esquinainferiorDerecha.class||esquinainferiorizquierda.class||esquinasuperiorIzquierda.class||esquinasuperiorderecha.class||interseccionDerecha.class||interseccionInferior.class||interseccionIzquierda.class|| esquinaInferiorUniversalIzquierda.class||interseccionSuperior.class||interseccionUniversal.class||paredHorizontal.class||paredHorizontalInferior.class||paredHorizontalSuperior.class||paredVertical.class||paredVerticalDerecha.class||paredVerticalIzquierda.class )){
+        setLocation(getX(),getY()+5);}
         break;
          case 1:
         setRotation(90);
         setLocation(getX(),getY()+5);
+        if(isTouching(esquinaInferiorUniversalDerecha.class || esquinaInferiorUniversalIzquierda.class||esquinaSuperiorUniversalDerecha.class||esquinaSuperiorUniversalIzquierda.class||esquinainferiorDerecha.class||esquinainferiorizquierda.class||esquinasuperiorIzquierda.class||esquinasuperiorderecha.class||interseccionDerecha.class||interseccionInferior.class||interseccionIzquierda.class|| esquinaInferiorUniversalIzquierda.class||interseccionSuperior.class||interseccionUniversal.class||paredHorizontal.class||paredHorizontalInferior.class||paredHorizontalSuperior.class||paredVertical.class||paredVerticalDerecha.class||paredVerticalIzquierda.class )){
+        setLocation(getX(),getY()-5);}
         break;
          case 2:
         setRotation(0);
         setLocation(getX()-5,getY());
+        if(isTouching(esquinaInferiorUniversalIzquierda.class||esquinaInferiorUniversalDerecha.class ||esquinaSuperiorUniversalDerecha.class||esquinaSuperiorUniversalIzquierda.class||esquinainferiorDerecha.class||esquinainferiorizquierda.class||esquinasuperiorIzquierda.class||esquinasuperiorderecha.class||interseccionDerecha.class||interseccionInferior.class||interseccionIzquierda.class|| esquinaInferiorUniversalIzquierda.class||interseccionSuperior.class||interseccionUniversal.class||paredHorizontal.class||paredHorizontalInferior.class||paredHorizontalSuperior.class||paredVertical.class||paredVerticalDerecha.class||paredVerticalIzquierda.class )){
+        setLocation(getX(),getY()-5);}
         break;
          case 3:
         setRotation(0);
         setLocation(getX()+5,getY());
+        if(isTouching(esquinaInferiorUniversalDerecha.class||esquinaInferiorUniversalIzquierda.class||esquinaSuperiorUniversalDerecha.class||esquinaSuperiorUniversalIzquierda.class||esquinainferiorDerecha.class||esquinainferiorizquierda.class||esquinasuperiorIzquierda.class||esquinasuperiorderecha.class||interseccionDerecha.class||interseccionInferior.class||interseccionIzquierda.class|| esquinaInferiorUniversalIzquierda.class||interseccionSuperior.class||interseccionUniversal.class||paredHorizontal.class||paredHorizontalInferior.class||paredHorizontalSuperior.class||paredVertical.class||paredVerticalDerecha.class||paredVerticalIzquierda.class )){
+        setLocation(getX(),getY()-5);}
         break;
     }
     
