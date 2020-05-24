@@ -33,6 +33,7 @@ public class Chell extends Actor
         case 0:
         setRotation(270);
         setLocation(getX(),getY()-5);
+       // if(isTouching())
         break;
          case 1:
         setRotation(90);
