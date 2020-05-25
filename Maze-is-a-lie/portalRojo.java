@@ -15,7 +15,7 @@ public class portalRojo extends Actor
     public void act()
     {
         if (isTouching(Chell.class)) {
-            Greenfoot.setWorld( new  ScoreScreen());
+            Greenfoot.setWorld( new ScoreScreen());
         }
     }
 }
