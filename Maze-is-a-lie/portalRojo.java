@@ -1,4 +1,3 @@
-// WARNING: This file is auto-generated and any changes to it will be overwritten
 import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
@@ -16,6 +15,8 @@ public class portalRojo extends Actor
     {
         if (isTouching(Chell.class)) {
             Greenfoot.setWorld( new ScoreScreen());
+             Maze2.theme.stop();
+            Greenfoot.setWorld( new  ScoreScreen());
         }
     }
-}
+        }

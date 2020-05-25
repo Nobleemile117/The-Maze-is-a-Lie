@@ -32,31 +32,31 @@ public class Chell extends Actor
     switch(direccion){
         case 0:
         setRotation(270);
-        setLocation(getX(),getY()-5);
+        setLocation(getX(),getY()-4);
         if((isTouching(esquinaInferiorUniversalDerecha.class) || isTouching(esquinaInferiorUniversalIzquierda.class) || isTouching(esquinaSuperiorUniversalDerecha.class)||isTouching(esquinaSuperiorUniversalIzquierda.class)||isTouching(esquinainferiorDerecha.class)||isTouching(esquinainferiorizquierda.class)||isTouching(esquinasuperiorIzquierda.class)||isTouching(esquinasuperiorderecha.class)||isTouching(interseccionDerecha.class)||isTouching(interseccionInferior.class)||isTouching(interseccionIzquierda.class)||isTouching( esquinaInferiorUniversalIzquierda.class)||isTouching(interseccionSuperior.class)||isTouching(interseccionUniversal.class)||isTouching(paredHorizontal.class)||isTouching(paredHorizontalInferior.class)||isTouching(paredHorizontalSuperior.class)||isTouching(paredVertical.class)||isTouching(paredVerticalDerecha.class)||isTouching(paredVerticalIzquierda.class))){
-        setLocation(getX(),getY()+5);}
+        setLocation(getX(),getY()+4);}
         break;
          case 1:
         setRotation(90);
-        setLocation(getX(),getY()+5);
+        setLocation(getX(),getY()+4);
         if((isTouching(esquinaInferiorUniversalDerecha.class) || isTouching(esquinaInferiorUniversalIzquierda.class)||isTouching(esquinaSuperiorUniversalDerecha.class)||isTouching(esquinaSuperiorUniversalIzquierda.class)||isTouching(esquinainferiorDerecha.class)||isTouching(esquinainferiorizquierda.class)||isTouching(esquinasuperiorIzquierda.class)||isTouching(esquinasuperiorderecha.class)||isTouching(interseccionDerecha.class)||isTouching(interseccionInferior.class)||isTouching(interseccionIzquierda.class)||isTouching( esquinaInferiorUniversalIzquierda.class)||isTouching(interseccionSuperior.class)||isTouching(interseccionUniversal.class)||isTouching(paredHorizontal.class)||isTouching(paredHorizontalInferior.class)||isTouching(paredHorizontalSuperior.class)||isTouching(paredVertical.class)||isTouching(paredVerticalDerecha.class)||isTouching(paredVerticalIzquierda.class) )){
-        setLocation(getX(),getY()-5);}
+        setLocation(getX(),getY()-4);}
         break;
          case 2:
         setRotation(0);
-        setLocation(getX()-5,getY());
+        setLocation(getX()-4,getY());
         if((isTouching(esquinaInferiorUniversalIzquierda.class)||isTouching(esquinaInferiorUniversalDerecha.class) ||isTouching(esquinaSuperiorUniversalDerecha.class)||isTouching(esquinaSuperiorUniversalIzquierda.class)||isTouching(esquinainferiorDerecha.class)||isTouching(esquinainferiorizquierda.class)||isTouching(esquinasuperiorIzquierda.class)||isTouching(esquinasuperiorderecha.class)||isTouching(interseccionDerecha.class)||isTouching(interseccionInferior.class)||isTouching(interseccionIzquierda.class)||isTouching( esquinaInferiorUniversalIzquierda.class)||isTouching(interseccionSuperior.class)||isTouching(interseccionUniversal.class)||isTouching(paredHorizontal.class)||isTouching(paredHorizontalInferior.class)||isTouching(paredHorizontalSuperior.class)||isTouching(paredVertical.class)||isTouching(paredVerticalDerecha.class)||isTouching(paredVerticalIzquierda.class) )){
-        setLocation(getX()+5,getY());}
+        setLocation(getX()+4,getY());}
         if((isTouching(esquinaInferiorUniversalIzquierda.class)||isTouching(esquinaInferiorUniversalDerecha.class) ||isTouching(esquinaSuperiorUniversalDerecha.class)||isTouching(esquinaSuperiorUniversalIzquierda.class)||isTouching(esquinainferiorDerecha.class)||isTouching(esquinainferiorizquierda.class)||isTouching(esquinasuperiorIzquierda.class)||isTouching(esquinasuperiorderecha.class)||isTouching(interseccionDerecha.class)||isTouching(interseccionInferior.class)||isTouching(interseccionIzquierda.class)||isTouching( esquinaInferiorUniversalIzquierda.class)||isTouching(interseccionSuperior.class)||isTouching(interseccionUniversal.class)||isTouching(paredHorizontal.class)||isTouching(paredHorizontalInferior.class)||isTouching(paredHorizontalSuperior.class)||isTouching(paredVertical.class)||isTouching(paredVerticalDerecha.class)||isTouching(paredVerticalIzquierda.class))){
-        setLocation(getX()+5,getY());}
+        setLocation(getX()+4,getY());}
         break;
          case 3:
         setRotation(0);
-        setLocation(getX()+5,getY());
+        setLocation(getX()+4,getY());
         if((isTouching(esquinaInferiorUniversalDerecha.class)||isTouching(esquinaInferiorUniversalIzquierda.class)||isTouching(esquinaSuperiorUniversalDerecha.class)||isTouching(esquinaSuperiorUniversalIzquierda.class)||isTouching(esquinainferiorDerecha.class)||isTouching(esquinainferiorizquierda.class)||isTouching(esquinasuperiorIzquierda.class)||isTouching(esquinasuperiorderecha.class)||isTouching(interseccionDerecha.class)||isTouching(interseccionInferior.class)||isTouching(interseccionIzquierda.class)||isTouching( esquinaInferiorUniversalIzquierda.class)||isTouching(interseccionSuperior.class)||isTouching(interseccionUniversal.class)||isTouching(paredHorizontal.class)||isTouching(paredHorizontalInferior.class)||isTouching(paredHorizontalSuperior.class)||isTouching(paredVertical.class)||isTouching(paredVerticalDerecha.class)||isTouching(paredVerticalIzquierda.class) )){
-        setLocation(getX()-5,getY());}
+        setLocation(getX()-4,getY());}
         if((isTouching(esquinaInferiorUniversalDerecha.class)||isTouching(esquinaInferiorUniversalIzquierda.class)||isTouching(esquinaSuperiorUniversalDerecha.class)||isTouching(esquinaSuperiorUniversalIzquierda.class)||isTouching(esquinainferiorDerecha.class)||isTouching(esquinainferiorizquierda.class)||isTouching(esquinasuperiorIzquierda.class)||isTouching(esquinasuperiorderecha.class)||isTouching(interseccionDerecha.class)||isTouching(interseccionInferior.class)||isTouching(interseccionIzquierda.class)||isTouching( esquinaInferiorUniversalIzquierda.class)||isTouching(interseccionSuperior.class)||isTouching(interseccionUniversal.class)||isTouching(paredHorizontal.class)||isTouching(paredHorizontalInferior.class)||isTouching(paredHorizontalSuperior.class)||isTouching(paredVertical.class)||isTouching(paredVerticalDerecha.class)||isTouching(paredVerticalIzquierda.class) )){
-        setLocation(getX()-5,getY()-5);}
+        setLocation(getX()-4,getY());}
         break;
     }
     

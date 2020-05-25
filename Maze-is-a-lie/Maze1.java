@@ -10,12 +10,13 @@ import java.io.*;
 
     public class Maze1 extends World
     {
-        private GreenfootSound theme2 =  new  GreenfootSound("copiedCityNier.mp3");
+        public static GreenfootSound theme =  new  GreenfootSound("copiedCityNier.mp3");
         private Chell chell =  new  Chell();
+        private portalAzul portal =  new  portalAzul();
         private int direccion;
         private Stopwatch uhr = new Stopwatch();
-        private int timer = 0;
-        private int timer2 =0;
+        private static int timer = 0;
+        private static int timer2 =0;
         
         /**
          * Constructor for objects of class Maze1.
@@ -28,17 +29,19 @@ import java.io.*;
             createMaze();
             addObject(chell, 385, 315);
             addObject(uhr, 50, 50);
+            addObject(portal, 300, 500);
         }
         
         public void act(){
             //createMaze();
-            theme2.play();
+            theme.play();
             timer++;
             if(timer==60){
                 timer2++;
                 timer=0;
             }
             uhr.updateStopwatch(timer2);
+           
         }
         
         /*
@@ -97,6 +100,12 @@ import java.io.*;
                punterox+=35;
                
        }
+       public static int getTimer(){
+        return timer;//da error en la 2 corrida
+        }
+       public static int getTimer2(){
+        return timer2; //da error en la 2 corrida
+        }
        
            
     }

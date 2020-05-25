@@ -17,7 +17,7 @@ public class Menu extends World
      */
     public Menu()
     {
-        super(800, 450, 1);
+        super(800, 500, 1);
         preparamundo();
     }
 
@@ -33,6 +33,8 @@ public class Menu extends World
         
         addObject( new  Salir(), 400, 350);
         
+        addObject( new  Leaderboard(), 370, 450);
+        
         addObject(puntero, 165, 250);
     }
 
@@ -43,7 +45,7 @@ public class Menu extends World
     {
         theme.play();
         
-        if (Greenfoot.isKeyDown("UP") && opcion != 0) {
+           if (Greenfoot.isKeyDown("UP") && opcion != 0) {
             opcion = opcion + 1;
         }
         
@@ -68,6 +70,11 @@ public class Menu extends World
                     
                     break;
                 }
+                /*case 2 : {
+                    Greenfoot.setWorld( new  Leaderboards());
+                    
+                    break;
+                }*/
                 case 0 : {
                     theme.stop();
                     Greenfoot.setWorld( new  Maze1());
