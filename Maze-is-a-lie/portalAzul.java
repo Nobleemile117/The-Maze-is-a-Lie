@@ -5,7 +5,7 @@ import greenfoot.*;
 /**
  * 
  */
-public class PortalAzul extends Actor
+public class portalAzul extends Actor
 {
 
     /**
