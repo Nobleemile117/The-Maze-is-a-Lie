@@ -10,7 +10,6 @@ import java.io.*;
 
 public class Maze1 extends World
 {
-    public static GreenfootSound theme =  new  GreenfootSound("copiedCityNier.mp3");
     private Chell chell =  new  Chell();
     private PortalAzul portal =  new  PortalAzul();
     private int direccion;
@@ -23,7 +22,7 @@ public class Maze1 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(770, 630, 1);
-
+        Stopwatch.getInstance().reset();
         createMaze();
         addObject(chell, 385, 315);
         addObject(Stopwatch.getInstance(), 50, 50);
@@ -32,8 +31,8 @@ public class Maze1 extends World
 
     public void act(){
         //createMaze();
-        theme.play();
-
+        CopiedCity.getInstance().playTheme();
+        Stopwatch.getInstance().start();
     }
     public void createMaze()
     {   

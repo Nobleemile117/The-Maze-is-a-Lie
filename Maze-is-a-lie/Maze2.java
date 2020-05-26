@@ -7,8 +7,8 @@ import greenfoot.*;
  */
 public class Maze2 extends World
 {
-    public static GreenfootSound theme =  new  GreenfootSound("WantYouGone8bit.mp3");
     
+    private PortalRojo portal =  new  PortalRojo();
     private Chell chell = new Chell();
     /**
      * Constructor for objects of class Maze2.
@@ -18,9 +18,11 @@ public class Maze2 extends World
         super(770, 630, 1);
         addObject(chell,385,315);
         addObject(Stopwatch.getInstance(), 50, 50);
+        addObject(portal, 300, 500);
     }
 
     public void act(){
-        theme.play();
+        WantYouGone8bit.getInstance().playTheme();
+        Stopwatch.getInstance().start();
     }
 }
