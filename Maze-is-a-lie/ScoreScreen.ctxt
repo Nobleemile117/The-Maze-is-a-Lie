@@ -6,4 +6,7 @@ comment1.target=ScoreScreen()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ ScoreScreen.\r\n\ \r\n
 comment2.params=
 comment2.target=void\ act()
-numComments=3
+comment3.params=
+comment3.target=void\ compareScores()
+comment3.text=\r\n\ \ \ \ public\ void\ DrawHighScore(){\r\n\ \ \ \ GreenfootImage\ img\ \=\ new\ GreenfootImage(50,\ 20);\r\n\ \ \ \ \ \ \ \ img.setColor(Color.BLACK);\r\n\ \ \ \ \ \ \ \ img.setFont(new\ Font("Calibri",\ 20));\r\n\ \ \ \ \ \ \ \ img.drawString("Top\ time\:\ "+\ highScore,\ 5,\ 18);\r\n\ \ \ \ \ \ \ \ setImage(img);\r\n\ \ \ \ }\r\n\ \ \ \ public\ String\ GetHighScoreValue(){\r\n\ \ \ \ \ \ \ \ FileReader\ readfile\ \=\ null;\r\n\ \ \ \ \ \ \ \ BufferedReader\ reader\ \=\ null;\r\n\ \ \ \ \ \ \ \ try{\r\n\ \ \ \ \ \ \ \ \ readfile\ \=\ new\ FileReader("leaderboard.txt");\r\n\ \ \ \ \ \ \ \ \ reader\ \=\ new\ BufferedReader(readfile);\r\n\ \ \ \ \ \ \ \ \ return\ reader.readLine();\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ catch(Exception\ e){\r\n\ \ \ \ \ \ \ \ \ \ \ \ return"0";\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ finally{\r\n\ \ \ \ \ \ \ \ \ \ \ \ try{\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reader.close();\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ catch(Exception\ e){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ e.printStackTrace();\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n}
+numComments=4
