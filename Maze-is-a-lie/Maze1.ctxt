@@ -8,13 +8,4 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ createMaze()
-<<<<<<< HEAD
-comment4.params=
-comment4.target=int\ getTimer()
-comment4.text=\r\n\ \ \ \ public\ void\ createMaze(){\r\n\ \ \ \ \ \ \ \ int\ punterox\=0;\r\n\ \ \ \ \ \ \ \ int\ punteroy\=0;\r\n\r\n\ \ \ \ \ \ \ \ addObject(new\ esquinasuperiorIzquierda(),punterox,punteroy);\r\n\ \ \ \ \ \ \ \ punterox+\=35;\r\n\ \ \ \ \ \ \ \ while(punterox<\=735){\r\n\ \ \ \ \ \ \ \ \ \ \ \ addObject(new\ paredHorizontalSuperior(),punterox,punteroy);\r\n\ \ \ \ \ \ \ \ \ \ \ \ punterox+\=35;\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ addObject(new\ esquinasuperiorderecha(),punterox,punteroy);\r\n\ \ \ \ \ \ \ \ punterox\=0;\r\n\ \ \ \ \ \ \ \ punteroy\=+35;\r\n\ \ \ \ \ \ \ \ addObject(new\ paredVerticalIzquierda(),punterox,punteroy);\r\n\ \ \ \ \ \ \ \ punterox+\=35;\r\n\r\n\ \ \ \ }\r\n
-comment5.params=
-comment5.target=int\ getTimer2()
-numComments=6
-=======
 numComments=4
->>>>>>> bd17b807830610b58faa498342fd42d7e85d8a29
