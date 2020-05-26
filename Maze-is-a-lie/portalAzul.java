@@ -5,7 +5,7 @@ import greenfoot.*;
 /**
  * 
  */
-public class portalAzul extends Actor
+public class PortalAzul extends Actor
 {
 
     /**
@@ -14,8 +14,8 @@ public class portalAzul extends Actor
     public void act()
     {
         if(isTouching(Chell.class)){
-        Maze1.theme.stop();
-        Greenfoot.setWorld( new  Maze2());
+            CopiedCity.getInstance().stopTheme();
+            Greenfoot.setWorld( new  Maze2());
         }
     }
 }

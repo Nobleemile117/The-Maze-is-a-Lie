@@ -5,7 +5,7 @@ import greenfoot.*;
 /**
  * 
  */
-public class portalRojo extends Actor
+public class PortalRojo extends Actor
 {
 
     /**
@@ -15,8 +15,7 @@ public class portalRojo extends Actor
     {
         if (isTouching(Chell.class)) {
             Greenfoot.setWorld( new ScoreScreen());
-             Maze2.theme.stop();
-            Greenfoot.setWorld( new  ScoreScreen());
+             WantYouGone8bit.getInstance().stopTheme();
         }
     }
         }
