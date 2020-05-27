@@ -12,6 +12,8 @@ public class ScoreScreen extends World
 {
     private GreenfootSound theme =  new  GreenfootSound("CaraMia8bit.mp3");
     private String name;
+    private Salir salir =  new  Salir();
+    private Jugar jugar =  new  Jugar();
     /**
      * Constructor for objects of class ScoreScreen.
      * 
@@ -20,44 +22,36 @@ public class ScoreScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 400, 1);
-        
-        
-       
+        addObject(TopTime.getInstance(), 300, 200);
+        addObject(salir, 600, 350);
+        addObject(jugar, 600, 150);
+
     }
+
     public void act(){
-    theme.play();
-    }/*
-    public void DrawHighScore(){
-    GreenfootImage img = new GreenfootImage(50, 20);
-        img.setColor(Color.BLACK);
-        img.setFont(new Font("Calibri", 20));
-        img.drawString("Top time: "+ highScore, 5, 18);
-        setImage(img);
+        TopTime.getInstance().DrawScore();
+        theme.play();
+        compareScores();
     }
-    public String GetHighScoreValue(){
-        FileReader readfile = null;
-        BufferedReader reader = null;
-        try{
-         readfile = new FileReader("leaderboard.txt");
-         reader = new BufferedReader(readfile);
-         return reader.readLine();
-        }
-        catch(Exception e){
-            return"0";
-        }
-        finally{
-            try{
-                reader.close();
-            }
-            catch(Exception e){
-                e.printStackTrace();
-            }
-        }
-    }*/
+
     public void compareScores(){
+        TopTime.getInstance().setHighScore();
+        if(TopTime.getInstance().getTopTime() == 0){
+            String name =JOptionPane.showInputDialog("You set a new. Cual es tu nombre?");
+            TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
+        }
         if(Stopwatch.getInstance().getTime()<TopTime.getInstance().getTopTime()){
-         String name =JOptionPane.showInputDialog("You set a new. Cual es tu nombre?");
-         
+            String name =JOptionPane.showInputDialog("You set a new. Cual es tu nombre?");
+            TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
         }
+        if(Greenfoot.mouseClicked(salir)){
+            theme.stop();
+            Greenfoot.stop();
         }
+        if(Greenfoot.mouseClicked(jugar)){
+            theme.stop();
+            Greenfoot.setWorld( new  Menu());
+        }
+
+    }
 }
