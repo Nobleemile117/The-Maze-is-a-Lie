@@ -34,7 +34,7 @@ public class Menu extends World
         addObject( new  Salir(), 400, 350);
         addObject(puntero, 165, 250);
 
-        addObject(leaderboard, 370, 450);
+        addObject(leaderboard, 400, 450);
 
     }
     /**
