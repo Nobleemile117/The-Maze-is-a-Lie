@@ -46,7 +46,7 @@ public class TopTime extends Actor
     GreenfootImage img = new GreenfootImage(400, 200);
         img.setColor(Color.WHITE);
         img.setFont(new Font("Calibri", 20));
-        img.drawString("Time: " + Stopwatch.getInstance().getTime(), 5, 18);
+        img.drawString("Your Time: " + Stopwatch.getInstance().getTime(), 5, 18);
         setImage(img);
     }
     public String GetHighScoreValue(){

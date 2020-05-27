@@ -24,10 +24,8 @@ public class Maze1 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(770, 630, 1);
         createMaze();
-        addObject(chell, 385, 315);
         Stopwatch.getInstance().reset();
         addObject(Stopwatch.getInstance(), 50, 50);
-        addObject(portal, 300, 500);
         //Stopwatch.getInstance().start();
     }
 
@@ -65,6 +63,17 @@ public class Maze1 extends World
                     punterox=0;
                     punteroy+=35;
                     break;
+                    
+                    case '4':
+                    addObject(new Chell(), punterox, punteroy); 
+                    punterox+=35;
+                    break;
+                    
+                    case '5':
+                    addObject(new PortalAzul(),punterox,punteroy);
+                    punterox+=35;
+                    break;
+
                 }
                 caracterLeido = fileReader.read(ayuda);
             }
