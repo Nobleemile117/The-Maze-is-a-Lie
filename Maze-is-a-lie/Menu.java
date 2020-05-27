@@ -1,7 +1,7 @@
 import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
-
+import javax.swing.JOptionPane;
 /**
  * 
  */
@@ -34,22 +34,20 @@ public class Menu extends World
         addObject( new  Salir(), 400, 350);
         addObject(puntero, 165, 250);
 
-        addObject(leaderboard, 370, 450);
+        addObject(leaderboard, 400, 450);
 
-       
     }
-
     /**
      * 
      */
     public void act()
     {
         theme.play();
-        
+
         if (Greenfoot.isKeyDown("UP") && opcion != 0) {
             opcion = opcion + 1;
         }
-        
+
         if (Greenfoot.isKeyDown("Down") && opcion != 1) {
             opcion = opcion - 1;
         }
@@ -67,27 +65,29 @@ public class Menu extends World
         if (Greenfoot.isKeyDown("SPACE") || Greenfoot.isKeyDown("ENTER")) {
             switch (opcion) {
                 case 1 : 
-                    Greenfoot.stop();
+                theme.stop();
+                Greenfoot.stop();
 
-                    break;
-                
+                break;
+
                 /*case 2 : {
                 Greenfoot.setWorld( new  Leaderboards());
 
                 break;
                 }*/
                 case 0 : 
-                    theme.stop();
-                    Greenfoot.setWorld( new  Maze1());
 
-                    break;
-                
+                theme.stop();
+                Greenfoot.setWorld( new  Maze1());
+
+                break;
+
             }
         }
-         if(Greenfoot.mouseClicked(leaderboard)){
-             theme.stop();
-           Greenfoot.setWorld( new  Leaderboards());
+        if(Greenfoot.mouseClicked(leaderboard)){
+            theme.stop();
+            Greenfoot.setWorld( new  Leaderboards());
         }
     }
-    
+
 }
