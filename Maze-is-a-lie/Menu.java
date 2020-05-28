@@ -10,6 +10,7 @@ public class Menu extends World
     private int opcion = 0;
     private GreenfootSound theme =  new  GreenfootSound("menuTheme.mp3");
     private Leaderboard leaderboard = new Leaderboard();
+    private historyButton history = new historyButton();
     private Puntero puntero =  new  Puntero();
 
     /**
@@ -33,7 +34,7 @@ public class Menu extends World
 
         addObject( new  Salir(), 400, 350);
         addObject(puntero, 165, 250);
-
+        addObject(history,735,60);
         addObject(leaderboard, 400, 450);
 
     }
@@ -87,6 +88,10 @@ public class Menu extends World
         if(Greenfoot.mouseClicked(leaderboard)){
             theme.stop();
             Greenfoot.setWorld( new  Leaderboards());
+        }
+        if(Greenfoot.mouseClicked(history)){
+            JOptionPane.showConfirmDialog(null,
+                "Después de la caida de Aperture Science, nuestra protagonista Chell, se ve en la obligación de escapar de las instalaciones lo más pronto posible, ya que no cuenta con mucho tiempo. \n Las paredes se han convertido en un obstaculo para ella, y su pistola de portales, esta practicamente inservible. \n Aunque... hay una pequeña posibilidad de escape, al descomponerse la pistola de portales, se crearon dos ultimas conexiones. \n Es su UNICA escapatoria.", "DEEP LORE!", JOptionPane.DEFAULT_OPTION);
         }
     }
 

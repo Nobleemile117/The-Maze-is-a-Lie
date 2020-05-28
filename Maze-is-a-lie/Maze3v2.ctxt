@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Maze3v2
+comment1.params=
+comment1.target=Maze3v2()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Maze2.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ createMaze2()
+numComments=4
