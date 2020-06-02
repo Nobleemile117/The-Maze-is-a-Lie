@@ -38,6 +38,7 @@ public class Menu extends World
         addObject(leaderboard, 400, 450);
 
     }
+
     /**
      * 
      */

@@ -25,7 +25,49 @@ public class ScoreScreen extends World
         addObject(TopTime.getInstance(), 300, 200);
         addObject(salir, 600, 350);
         addObject(jugar, 600, 150);
+        TopTime.getInstance().setHighScore();
+        /*if(Stopwatch.getInstance().getTime()>TopTime.getInstance().getTopTime() && Stopwatch.getInstance().getTime()<TopTime2.getInstance().getTopTime() || TopTime.getInstance().getTopTime() != 0 && TopTime2.getInstance().getTopTime() == 0){
+        String name =JOptionPane.showInputDialog("You got the 2nd best time tell me what is your name?");
+        TopTime2.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
+        }*/
+        if(TopTime.getInstance().getTopTime() == 0){
+            String name =JOptionPane.showInputDialog("You set a top time tell me what is your name?");
+            TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
+        }
+        else{
+            if(Stopwatch.getInstance().getTime()<TopTime.getInstance().getTopTime()){
+                String name =JOptionPane.showInputDialog("You set a top time tell me what is your name?");
+                TopTime3.getInstance().setTopTime(TopTime2.getInstance().getName(),TopTime2.getInstance().getTopTime() );
+                TopTime2.getInstance().setTopTime(TopTime.getInstance().getName(),TopTime.getInstance().getTopTime() );
+                TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
+            }
+            else{
+                if(TopTime2.getInstance().getTopTime() == 0){
+                    String name =JOptionPane.showInputDialog("You got the 2nd best time tell me what is your name?");
+                    TopTime2.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
+                }
+                else{
+                    if(Stopwatch.getInstance().getTime()>TopTime.getInstance().getTopTime() && Stopwatch.getInstance().getTime()<TopTime2.getInstance().getTopTime()){
+                        String name =JOptionPane.showInputDialog("You got the 2nd best time tell me what is your name?");
+                        TopTime3.getInstance().setTopTime(TopTime2.getInstance().getName(),TopTime2.getInstance().getTopTime() );
+                        TopTime2.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
+                    }
+                    else{
+                        if(TopTime3.getInstance().getTopTime() == 0){
+                            String name =JOptionPane.showInputDialog("You got the 3rd best time tell me what is your name?");
+                            TopTime3.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
+                        }
+                        else{
+                            if(Stopwatch.getInstance().getTime()<TopTime2.getInstance().getTopTime() && Stopwatch.getInstance().getTime()<TopTime3.getInstance().getTopTime()){
+                                String name =JOptionPane.showInputDialog("You got the 3rd best time tell me what is your name?");
+                                TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
+                            }
 
+                        }
+                    }
+                }
+            }
+        }   
     }
 
     public void act(){
@@ -35,15 +77,6 @@ public class ScoreScreen extends World
     }
 
     public void compareScores(){
-        TopTime.getInstance().setHighScore();
-        if(TopTime.getInstance().getTopTime() == 0){
-            String name =JOptionPane.showInputDialog("You set a new. Cual es tu nombre?");
-            TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
-        }
-        if(Stopwatch.getInstance().getTime()<TopTime.getInstance().getTopTime()){
-            String name =JOptionPane.showInputDialog("You set a new. Cual es tu nombre?");
-            TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
-        }
         if(Greenfoot.mouseClicked(salir)){
             theme.stop();
             Greenfoot.stop();
@@ -52,6 +85,5 @@ public class ScoreScreen extends World
             theme.stop();
             Greenfoot.setWorld( new  Menu());
         }
-
     }
 }

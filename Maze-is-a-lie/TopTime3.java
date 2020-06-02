@@ -4,16 +4,17 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
+
 /**
- * Write a description of class TopTime here.
+ * Write a description of class TopTime3 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TopTime extends Actor
+public class TopTime3 extends Actor
 {
     private String highScore = "NoBody:0";
-    private static TopTime uniqueInstance;
+    private static TopTime3 uniqueInstance;
     /**
      * Act - do whatever the TopTime wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -30,36 +31,25 @@ public class TopTime extends Actor
         highScore = this.GetHighScoreValue();
     }
 
-    public static TopTime getInstance(){
+    public static TopTime3 getInstance(){
         if(uniqueInstance == null){
-            uniqueInstance = new TopTime();
+            uniqueInstance = new TopTime3();
         }
         return uniqueInstance;
     }
-    public String getName(){
-        
-        return (highScore.split(":")[0]);
-    }
+
     public void DrawHighScore(){
         highScore = this.GetHighScoreValue();
         GreenfootImage img = new GreenfootImage(400, 200);
         img.setColor(Color.WHITE);
         img.setFont(new Font("Times New Roman", 25));
-        img.drawString("Top time: " + highScore, 5, 30);
-        setImage(img);
-    }
-
-    public void DrawScore(){
-        GreenfootImage img = new GreenfootImage(400, 200);
-        img.setColor(Color.WHITE);
-        img.setFont(new Font("Calibri", 20));
-        img.drawString("Your Time: " + Stopwatch.getInstance().getTime(), 5, 18);
+        img.drawString("3rd best time: " + highScore, 5, 30);
         setImage(img);
     }
 
     public String GetHighScoreValue(){
 
-        try(FileReader readfile = new FileReader("leaderboard.txt");
+        try(FileReader readfile = new FileReader("leaderboard3.txt");
 
         BufferedReader reader = new BufferedReader(readfile)){
             return reader.readLine();
@@ -76,7 +66,7 @@ public class TopTime extends Actor
 
     public void setTopTime(String name, int score){
         this.highScore = name + ":" + score;
-        File scoreFile = new File ("leaderboard.txt");
+        File scoreFile = new File ("leaderboard3.txt");
         try(FileWriter writerFile = new FileWriter(scoreFile);
         BufferedWriter writer = new BufferedWriter(writerFile)){
             writer.write(this.highScore);

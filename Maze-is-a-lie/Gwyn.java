@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Gwyn extends Actor
+public class Gwyn extends Music
 {
     private static Gwyn uniqueInstance;
     private  GreenfootSound theme =  new  GreenfootSound("Gwyn.mp3");

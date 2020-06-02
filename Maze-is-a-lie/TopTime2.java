@@ -4,62 +4,53 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
+
 /**
- * Write a description of class TopTime here.
+ * Write a description of class TopTime2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TopTime extends Actor
+public class TopTime2 extends Actor
 {
-    private String highScore = "NoBody:0";
-    private static TopTime uniqueInstance;
+    private String score = "NoBody:0";
+    private static TopTime2 uniqueInstance;
     /**
      * Act - do whatever the TopTime wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        if(highScore.equals("NoBody:0")){
-            highScore = this.GetHighScoreValue();
+        if(score.equals("NoBody:0")){
+            score = this.GetHighScoreValue();
         }
 
     }
 
     public void setHighScore(){
-        highScore = this.GetHighScoreValue();
+        score = this.GetHighScoreValue();
     }
 
-    public static TopTime getInstance(){
+    public static TopTime2 getInstance(){
         if(uniqueInstance == null){
-            uniqueInstance = new TopTime();
+            uniqueInstance = new TopTime2();
         }
         return uniqueInstance;
     }
-    public String getName(){
-        
-        return (highScore.split(":")[0]);
-    }
+
     public void DrawHighScore(){
-        highScore = this.GetHighScoreValue();
+        score = this.GetHighScoreValue();
         GreenfootImage img = new GreenfootImage(400, 200);
         img.setColor(Color.WHITE);
         img.setFont(new Font("Times New Roman", 25));
-        img.drawString("Top time: " + highScore, 5, 30);
+        img.drawString("2nd best time: " + score, 5, 30);
         setImage(img);
     }
 
-    public void DrawScore(){
-        GreenfootImage img = new GreenfootImage(400, 200);
-        img.setColor(Color.WHITE);
-        img.setFont(new Font("Calibri", 20));
-        img.drawString("Your Time: " + Stopwatch.getInstance().getTime(), 5, 18);
-        setImage(img);
-    }
 
     public String GetHighScoreValue(){
 
-        try(FileReader readfile = new FileReader("leaderboard.txt");
+        try(FileReader readfile = new FileReader("leaderboard2.txt");
 
         BufferedReader reader = new BufferedReader(readfile)){
             return reader.readLine();
@@ -71,15 +62,18 @@ public class TopTime extends Actor
     }
 
     public int getTopTime(){
-        return Integer.parseInt((highScore.split(":")[1]));
+        return Integer.parseInt((score.split(":")[1]));
     }
-
+    public String getName(){
+        
+        return (score.split(":")[0]);
+    }
     public void setTopTime(String name, int score){
-        this.highScore = name + ":" + score;
-        File scoreFile = new File ("leaderboard.txt");
+        this.score = name + ":" + score;
+        File scoreFile = new File ("leaderboard2.txt");
         try(FileWriter writerFile = new FileWriter(scoreFile);
         BufferedWriter writer = new BufferedWriter(writerFile)){
-            writer.write(this.highScore);
+            writer.write(this.score);
         }
         catch(Exception e){}
 
