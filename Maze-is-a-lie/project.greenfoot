@@ -189,16 +189,11 @@ dependency8.type=UsesDependency
 dependency9.from=Maze1
 dependency9.to=Stopwatch
 dependency9.type=UsesDependency
-editor.fx.0.height=739
-editor.fx.0.width=816
-<<<<<<< HEAD
-editor.fx.0.x=275
-editor.fx.0.y=-4
-=======
-editor.fx.0.x=552
-editor.fx.0.y=100
->>>>>>> 6a07f633a215af0fe3d8c42e62bc760eaae032bd
-height=788
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+height=735
 package.numDependencies=52
 package.numTargets=39
 project.charset=UTF-8
