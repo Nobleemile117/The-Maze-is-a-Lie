@@ -17,4 +17,4 @@ hacer es que se encuentre esa nostalgia de los clasicos.
 
 
 ## Diagrama de clases
-diagrama de clases.png
+diagrama de ![Diagrama de clases](Diagramadeclase2.png)

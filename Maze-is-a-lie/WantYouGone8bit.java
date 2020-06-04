@@ -5,7 +5,7 @@ import greenfoot.*;
 /**
  * 
  */
-public class WantYouGone8bit extends Actor
+public class WantYouGone8bit extends Music
 {
     private static WantYouGone8bit uniqueInstance;
     private  GreenfootSound theme =  new  GreenfootSound("WantYouGone8bit.mp3");

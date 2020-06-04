@@ -8,8 +8,6 @@ import java.io.*;
  */
 public class Maze2 extends World
 {
-
-    private PortalRojo portal =  new  PortalRojo();
     private Chell chell = new Chell();
     /**
      * Constructor for objects of class Maze2.
