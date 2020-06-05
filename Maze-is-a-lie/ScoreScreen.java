@@ -31,7 +31,7 @@ public class ScoreScreen extends World
     }
 
     public void act(){
-        showText(String.valueOf(Stopwatch.getInstance().getTime()),300,200 ); 
+        showText("Your Score: "+String.valueOf(Stopwatch.getInstance().getTime()),200,100 ); 
         theme.play();
         buttons();
     }
