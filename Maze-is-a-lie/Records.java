@@ -11,7 +11,7 @@ import java.io.BufferedWriter;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TopTime 
+public class Records implements Comparable<Records>
 {
     private String highScore = "NoBody:0";
     private int score;
@@ -20,7 +20,7 @@ public class TopTime
      * Act - do whatever the TopTime wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public TopTime(int score, String name) {
+    public Records(int score, String name) {
         this.name=name;
         this.score=score;
     }
@@ -37,7 +37,7 @@ public class TopTime
     @Override
     public boolean equals(Object obj) {
 
-         return  (((TopTime)this).score == ((TopTime)obj).score)&&(((TopTime)this).name.equals(((TopTime)obj).name));
+         return  (((Records)this).score == ((Records)obj).score)&&(((Records)this).name.equals(((Records)obj).name));
     }
     public void setPlayerName(String name) {
         this.name = name;
@@ -54,13 +54,15 @@ public class TopTime
     public String getPlayerName() {
         return name;
     }
-    public int compareTo(TopTime record) {
+    public int compareTo(Records record) {
         if (score < record.score) {
-            return 1;
+            return -1;
         }
         if (score > record.score) {
-            return -1;
+            return 1;
         }
         return 0;
     }
+    
+    
  }

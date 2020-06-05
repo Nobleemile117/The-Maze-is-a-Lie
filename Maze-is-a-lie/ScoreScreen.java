@@ -22,61 +22,21 @@ public class ScoreScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 400, 1);
-        addObject(TopTime.getInstance(), 300, 200);
         addObject(salir, 600, 350);
         addObject(jugar, 600, 150);
-        TopTime.getInstance().setHighScore();
-        /*if(Stopwatch.getInstance().getTime()>TopTime.getInstance().getTopTime() && Stopwatch.getInstance().getTime()<TopTime2.getInstance().getTopTime() || TopTime.getInstance().getTopTime() != 0 && TopTime2.getInstance().getTopTime() == 0){
-        String name =JOptionPane.showInputDialog("You got the 2nd best time tell me what is your name?");
-        TopTime2.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
-        }*/
-        if(TopTime.getInstance().getTopTime() == 0){
-            String name =JOptionPane.showInputDialog("You set a top time tell me what is your name?");
-            TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
-        }
-        else{
-            if(Stopwatch.getInstance().getTime()<TopTime.getInstance().getTopTime()){
-                String name =JOptionPane.showInputDialog("You set a top time tell me what is your name?");
-                TopTime3.getInstance().setTopTime(TopTime2.getInstance().getName(),TopTime2.getInstance().getTopTime() );
-                TopTime2.getInstance().setTopTime(TopTime.getInstance().getName(),TopTime.getInstance().getTopTime() );
-                TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
-            }
-            else{
-                if(TopTime2.getInstance().getTopTime() == 0){
-                    String name =JOptionPane.showInputDialog("You got the 2nd best time tell me what is your name?");
-                    TopTime2.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
-                }
-                else{
-                    if(Stopwatch.getInstance().getTime()>TopTime.getInstance().getTopTime() && Stopwatch.getInstance().getTime()<TopTime2.getInstance().getTopTime()){
-                        String name =JOptionPane.showInputDialog("You got the 2nd best time tell me what is your name?");
-                        TopTime3.getInstance().setTopTime(TopTime2.getInstance().getName(),TopTime2.getInstance().getTopTime() );
-                        TopTime2.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
-                    }
-                    else{
-                        if(TopTime3.getInstance().getTopTime() == 0){
-                            String name =JOptionPane.showInputDialog("You got the 3rd best time tell me what is your name?");
-                            TopTime3.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
-                        }
-                        else{
-                            if(Stopwatch.getInstance().getTime()<TopTime2.getInstance().getTopTime() && Stopwatch.getInstance().getTime()<TopTime3.getInstance().getTopTime()){
-                                String name =JOptionPane.showInputDialog("You got the 3rd best time tell me what is your name?");
-                                TopTime.getInstance().setTopTime(name,Stopwatch.getInstance().getTime() );
-                            }
-
-                        }
-                    }
-                }
-            }
-        }   
+        String name =JOptionPane.showInputDialog("Tell me What is your name? \n You can see on leaderboards if you are in the Top 10");
+        Records records =  new  Records(Stopwatch.getInstance().getTime() , name);
+        GameRecord.save(records);
+        
     }
 
     public void act(){
-        TopTime.getInstance().DrawScore();
+        showText(String.valueOf(Stopwatch.getInstance().getTime()),300,200 ); 
         theme.play();
-        compareScores();
+        buttons();
     }
 
-    public void compareScores(){
+    public void buttons(){
         if(Greenfoot.mouseClicked(salir)){
             theme.stop();
             Greenfoot.stop();

@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=TopTime
+comment0.target=Records
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ TopTime\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=score\ name
-comment1.target=TopTime(int,\ java.lang.String)
+comment1.target=Records(int,\ java.lang.String)
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ TopTime\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=int\ hashCode()
@@ -19,5 +19,5 @@ comment7.target=int\ getScore()
 comment8.params=
 comment8.target=java.lang.String\ getPlayerName()
 comment9.params=record
-comment9.target=int\ compareTo(TopTime)
+comment9.target=int\ compareTo(Records)
 numComments=10

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GameRecord
+comment1.params=list
+comment1.target=void\ saveDocument(java.util.List)
+comment2.params=record
+comment2.target=void\ save(Records)
+comment3.params=
+comment3.target=java.util.List\ list()
+comment4.params=
+comment4.target=int\ getMaxLength()
+numComments=5
