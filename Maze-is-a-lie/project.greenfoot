@@ -75,6 +75,7 @@ dependency25.from=Menu
 dependency25.to=Leaderboards
 dependency25.type=UsesDependency
 dependency26.from=Leaderboards
+<<<<<<< HEAD
 dependency26.to=returnButton
 dependency26.type=UsesDependency
 dependency27.from=Leaderboards
@@ -85,10 +86,23 @@ dependency28.to=TopTime
 dependency28.type=UsesDependency
 dependency29.from=Leaderboards
 dependency29.to=TopTime2
+=======
+dependency26.to=Records
+dependency26.type=UsesDependency
+dependency27.from=Leaderboards
+dependency27.to=GameRecord
+dependency27.type=UsesDependency
+dependency28.from=Maze3
+dependency28.to=Chell
+dependency28.type=UsesDependency
+dependency29.from=Maze3
+dependency29.to=Bloque
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 dependency29.type=UsesDependency
 dependency3.from=Maze3v2
 dependency3.to=PortalRojo2
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 dependency30.from=Leaderboards
 dependency30.to=TopTime3
 dependency30.type=UsesDependency
@@ -109,19 +123,49 @@ dependency35.to=Stopwatch
 dependency35.type=UsesDependency
 dependency36.from=Maze3
 dependency36.to=Gwyn
+=======
+dependency30.from=Maze3
+dependency30.to=PortalAzul2
+dependency30.type=UsesDependency
+dependency31.from=Maze3
+dependency31.to=PortalAzul22
+dependency31.type=UsesDependency
+dependency32.from=Maze3
+dependency32.to=Stopwatch
+dependency32.type=UsesDependency
+dependency33.from=Maze3
+dependency33.to=Gwyn
+dependency33.type=UsesDependency
+dependency34.from=ScoreScreen
+dependency34.to=Salir
+dependency34.type=UsesDependency
+dependency35.from=ScoreScreen
+dependency35.to=Jugar
+dependency35.type=UsesDependency
+dependency36.from=ScoreScreen
+dependency36.to=Records
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 dependency36.type=UsesDependency
 dependency37.from=ScoreScreen
 dependency37.to=Salir
 dependency37.type=UsesDependency
 dependency38.from=ScoreScreen
+<<<<<<< HEAD
 dependency38.to=Jugar
 dependency38.type=UsesDependency
 dependency39.from=ScoreScreen
 dependency39.to=Menu
+=======
+dependency38.to=Stopwatch
+dependency38.type=UsesDependency
+dependency39.from=ScoreScreen
+dependency39.to=GameRecord
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 dependency39.type=UsesDependency
 dependency4.from=Maze3v2
 dependency4.to=PortalRojo22
 dependency4.type=UsesDependency
+<<<<<<< HEAD
 dependency40.from=ScoreScreen
 dependency40.to=TopTime
 dependency40.type=UsesDependency
@@ -151,10 +195,42 @@ dependency48.to=Chell
 dependency48.type=UsesDependency
 dependency49.from=PortalAzul2
 dependency49.to=ScoreScreen
+=======
+dependency40.from=PortalAzul2
+dependency40.to=ScoreScreen
+dependency40.type=UsesDependency
+dependency41.from=PortalAzul2
+dependency41.to=Chell
+dependency41.type=UsesDependency
+dependency42.from=PortalAzul2
+dependency42.to=Gwyn
+dependency42.type=UsesDependency
+dependency43.from=PortalAzul22
+dependency43.to=Maze3v2
+dependency43.type=UsesDependency
+dependency44.from=PortalAzul22
+dependency44.to=Chell
+dependency44.type=UsesDependency
+dependency45.from=PortalRojo2
+dependency45.to=ScoreScreen
+dependency45.type=UsesDependency
+dependency46.from=PortalRojo2
+dependency46.to=Chell
+dependency46.type=UsesDependency
+dependency47.from=PortalRojo2
+dependency47.to=Gwyn
+dependency47.type=UsesDependency
+dependency48.from=Chell
+dependency48.to=Bloque
+dependency48.type=UsesDependency
+dependency49.from=GameRecord
+dependency49.to=Records
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 dependency49.type=UsesDependency
 dependency5.from=Maze3v2
 dependency5.to=Stopwatch
 dependency5.type=UsesDependency
+<<<<<<< HEAD
 dependency50.from=PortalAzul2
 dependency50.to=Chell
 dependency50.type=UsesDependency
@@ -186,6 +262,33 @@ dependency59.from=PortalAzul
 dependency59.to=CopiedCity
 dependency59.type=UsesDependency
 dependency6.from=Maze2
+=======
+dependency50.from=PortalAzul
+dependency50.to=Maze2
+dependency50.type=UsesDependency
+dependency51.from=PortalAzul
+dependency51.to=Chell
+dependency51.type=UsesDependency
+dependency52.from=PortalAzul
+dependency52.to=CopiedCity
+dependency52.type=UsesDependency
+dependency53.from=PortalRojo
+dependency53.to=Maze3
+dependency53.type=UsesDependency
+dependency54.from=PortalRojo
+dependency54.to=Chell
+dependency54.type=UsesDependency
+dependency55.from=PortalRojo
+dependency55.to=WantYouGone8bit
+dependency55.type=UsesDependency
+dependency56.from=PortalRojo22
+dependency56.to=Maze3
+dependency56.type=UsesDependency
+dependency57.from=PortalRojo22
+dependency57.to=Chell
+dependency57.type=UsesDependency
+dependency6.from=Maze1
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 dependency6.to=Chell
 dependency6.type=UsesDependency
 dependency7.from=Maze2
@@ -199,11 +302,19 @@ dependency9.to=Stopwatch
 dependency9.type=UsesDependency
 editor.fx.0.height=739
 editor.fx.0.width=816
+<<<<<<< HEAD
 editor.fx.0.x=512
 editor.fx.0.y=4
 height=744
 package.numDependencies=59
 package.numTargets=50
+=======
+editor.fx.0.x=552
+editor.fx.0.y=100
+height=1056
+package.numDependencies=57
+package.numTargets=30
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -275,21 +386,33 @@ target16.width=150
 target16.x=0
 target16.y=0
 target17.height=50
+<<<<<<< HEAD
 target17.name=CopiedCity
+=======
+target17.name=Records
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=80
 target17.x=0
 target17.y=0
 target18.height=50
+<<<<<<< HEAD
 target18.name=historyButton
+=======
+target18.name=Leaderboards
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 target18.showInterface=false
 target18.type=ClassTarget
 target18.width=100
 target18.x=0
 target18.y=0
 target19.height=50
+<<<<<<< HEAD
 target19.name=Jugar
+=======
+target19.name=Maze3
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 target19.showInterface=false
 target19.type=ClassTarget
 target19.width=80
@@ -303,6 +426,7 @@ target2.width=80
 target2.x=0
 target2.y=0
 target20.height=50
+<<<<<<< HEAD
 target20.name=paredHorizontalInferior
 target20.showInterface=false
 target20.type=ClassTarget
@@ -311,12 +435,23 @@ target20.x=0
 target20.y=0
 target21.height=50
 target21.name=interseccionInferior
+=======
+target20.name=Chell
+target20.showInterface=false
+target20.type=ClassTarget
+target20.width=80
+target20.x=0
+target20.y=0
+target21.height=50
+target21.name=ScoreScreen
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=130
 target21.x=0
 target21.y=0
 target22.height=50
+<<<<<<< HEAD
 target22.name=interseccionDerecha
 target22.showInterface=false
 target22.type=ClassTarget
@@ -325,12 +460,23 @@ target22.x=0
 target22.y=0
 target23.height=50
 target23.name=paredVerticalDerecha
+=======
+target22.name=Leaderboard
+target22.showInterface=false
+target22.type=ClassTarget
+target22.width=90
+target22.x=0
+target22.y=0
+target23.height=50
+target23.name=TopTime
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=140
 target23.x=0
 target23.y=0
 target24.height=50
+<<<<<<< HEAD
 target24.name=WantYouGone8bit
 target24.showInterface=false
 target24.type=ClassTarget
@@ -346,13 +492,34 @@ target25.x=0
 target25.y=0
 target26.height=50
 target26.name=PortalAzul2
+=======
+target24.name=Title
+target24.showInterface=false
+target24.type=ClassTarget
+target24.width=80
+target24.x=0
+target24.y=0
+target25.height=50
+target25.name=GameRecord
+target25.showInterface=false
+target25.type=ClassTarget
+target25.width=90
+target25.x=0
+target25.y=0
+target26.height=50
+target26.name=PortalAzul
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 target26.showInterface=false
 target26.type=ClassTarget
-target26.width=80
+target26.width=110
 target26.x=0
 target26.y=0
 target27.height=50
+<<<<<<< HEAD
 target27.name=PortalAzul22
+=======
+target27.name=Music
+>>>>>>> 2febf6857c55a36244878cfb1864fc3ad2067975
 target27.showInterface=false
 target27.type=ClassTarget
 target27.width=90
