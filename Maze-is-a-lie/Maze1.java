@@ -14,18 +14,20 @@ public class Maze1 extends World
     private Chell chell =  new  Chell();
     private PortalAzul portal =  new  PortalAzul();
     private int direccion;
-
+    private boolean exe;
+    
     /**
      * Constructor for objects of class Maze1.
      * 
      */
-    public Maze1()
-    {    
+    public Maze1(int x,int y)
+    {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(770, 630, 1);
-        createMaze();
+        createMaze(x,y);
         Stopwatch.getInstance().reset();
         addObject(Stopwatch.getInstance(), 50, 50);
+        exe = true;
         //Stopwatch.getInstance().start();
     }
 
@@ -36,16 +38,15 @@ public class Maze1 extends World
 
         }
 
-    public void createMaze()
+    public void createMaze(int x,int y)
     {   
-
-        int punterox=0;
-        int punteroy=0;
-
+        
         try(FileReader fileReader = new FileReader("Maze1.txt"))
         {
             char[] ayuda = new char[1];
-
+            int punterox = 0;
+            int punteroy = 0;
+            
             int caracterLeido = fileReader.read(ayuda);
             while(caracterLeido != -1){
                 switch(ayuda[0]){ 
@@ -64,11 +65,6 @@ public class Maze1 extends World
                     punteroy+=35;
                     break;
                     
-                    case '4':
-                    addObject(new Chell(), punterox, punteroy); 
-                    punterox+=35;
-                    break;
-                    
                     case '5':
                     addObject(new PortalAzul(),punterox,punteroy);
                     punterox+=35;
@@ -76,10 +72,19 @@ public class Maze1 extends World
 
                 }
                 caracterLeido = fileReader.read(ayuda);
+                addObject(new Chell(),x,y);
             }
         }catch(IOException ex){
             System.err.println("Error al leer el archivo");
             ex.printStackTrace();
         }
+    }
+    
+    public void setExe(){
+        exe = false;
+    }
+    
+    public boolean getExe(){
+        return exe;
     }
 }

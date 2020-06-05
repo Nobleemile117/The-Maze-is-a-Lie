@@ -9,13 +9,15 @@ import java.io.*;
 public class Maze2 extends World
 {
     private Chell chell = new Chell();
+    private boolean exe;
+
     /**
      * Constructor for objects of class Maze2.
      */
-    public Maze2()
+    public Maze2(int x,int y)
     {
         super(770, 630, 1);
-        createMaze2();
+        createMaze2(x,y);
         addObject(Stopwatch.getInstance(), 50, 50);
     }
 
@@ -24,7 +26,7 @@ public class Maze2 extends World
         Stopwatch.getInstance().start();
     }
     
-    public void createMaze2()
+    public void createMaze2(int x,int y)
     {   
 
         int punterox=0;
@@ -58,7 +60,7 @@ public class Maze2 extends World
                     break;
                     
                     case '5':
-                    addObject(new PortalRojo(),punterox,punteroy);
+                    addObject(new PortalRojo2(),punterox,punteroy);
                     punterox+=35;
                     break;
 
