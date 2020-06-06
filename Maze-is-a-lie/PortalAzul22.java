@@ -13,7 +13,7 @@ public class PortalAzul22 extends Actor
      */
     public void act()
     {if(isTouching(Chell.class)){
-            Greenfoot.setWorld( new Maze3v2());
+            Greenfoot.setWorld(new Maze3v2(50,70));
         }
     }
 }

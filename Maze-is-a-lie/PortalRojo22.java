@@ -15,7 +15,7 @@ public class PortalRojo22 extends Actor
     public void act() 
     {
         if(isTouching(Chell.class)){
-            Greenfoot.setWorld( new Maze3());
+            Greenfoot.setWorld(new Maze3(50,50));
         }
     }    
 }

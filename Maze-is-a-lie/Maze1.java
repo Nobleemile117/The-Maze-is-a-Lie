@@ -1,4 +1,4 @@
-
+import java.lang.String;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.io.*;
 /**
@@ -14,7 +14,6 @@ public class Maze1 extends World
     private Chell chell =  new  Chell();
     private PortalAzul portal =  new  PortalAzul();
     private int direccion;
-    private boolean exe;
     
     /**
      * Constructor for objects of class Maze1.
@@ -24,10 +23,9 @@ public class Maze1 extends World
     {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(770, 630, 1);
-        createMaze(x,y);
+        CreateMaze("Maze1.txt",x,y);
         Stopwatch.getInstance().reset();
         addObject(Stopwatch.getInstance(), 50, 50);
-        exe = true;
         //Stopwatch.getInstance().start();
     }
 
@@ -36,12 +34,12 @@ public class Maze1 extends World
         CopiedCity.getInstance().playTheme();
         Stopwatch.getInstance().start();
 
-        }
+    }
 
-    public void createMaze(int x,int y)
-    {   
-        
-        try(FileReader fileReader = new FileReader("Maze1.txt"))
+    public void CreateMaze(String file,int x,int y){
+        addObject(chell,x,y);
+        chell.setchellPos(1);
+        try(FileReader fileReader = new FileReader(file))
         {
             char[] ayuda = new char[1];
             int punterox = 0;
@@ -72,19 +70,10 @@ public class Maze1 extends World
 
                 }
                 caracterLeido = fileReader.read(ayuda);
-                addObject(new Chell(),x,y);
             }
         }catch(IOException ex){
             System.err.println("Error al leer el archivo");
             ex.printStackTrace();
         }
-    }
-    
-    public void setExe(){
-        exe = false;
-    }
-    
-    public boolean getExe(){
-        return exe;
     }
 }

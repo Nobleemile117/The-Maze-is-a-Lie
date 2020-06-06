@@ -10,10 +10,10 @@ public class Maze3v2 extends World
     /**
      * Constructor for objects of class Maze2.
      */
-    public Maze3v2()
+    public Maze3v2(int x,int y)
     {
         super(770, 630, 1);
-        createMaze2();
+        CreateMaze("Maze3v2.txt",x,y);
         addObject(Stopwatch.getInstance(), 50, 50);
     }
 
@@ -21,16 +21,15 @@ public class Maze3v2 extends World
         Stopwatch.getInstance().start();
     }
 
-    public void createMaze2()
-    {   
-
-        int punterox=0;
-        int punteroy=0;
-
-        try(FileReader fileReader = new FileReader("Maze3v2.txt"))
+    public void CreateMaze(String file,int x,int y){
+        addObject(chell,x,y);
+        chell.setchellPos(3);
+        try(FileReader fileReader = new FileReader(file))
         {
             char[] ayuda = new char[1];
-
+            int punterox = 0;
+            int punteroy = 0;
+            
             int caracterLeido = fileReader.read(ayuda);
             while(caracterLeido != -1){
                 switch(ayuda[0]){ 
@@ -48,20 +47,12 @@ public class Maze3v2 extends World
                     punterox=0;
                     punteroy+=35;
                     break;
-
-                    case '4':
-                    addObject(new Chell(), punterox, punteroy); 
-                    punterox+=35;
-                    break;
-
+                    
                     case '5':
                     addObject(new PortalRojo2(),punterox,punteroy);
                     punterox+=35;
                     break;
-                    case '6':
-                    addObject(new PortalRojo22(),punterox,punteroy);
-                    punterox+=35;
-                    break;
+
                 }
                 caracterLeido = fileReader.read(ayuda);
             }

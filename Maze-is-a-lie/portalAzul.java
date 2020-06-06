@@ -15,7 +15,7 @@ public class PortalAzul extends Actor
     {
         if(isTouching(Chell.class)){
             CopiedCity.getInstance().stopTheme();
-            Greenfoot.setWorld(new Maze2(50,50));
+            Greenfoot.setWorld(new Maze2(65,50));
         }
     }
 }

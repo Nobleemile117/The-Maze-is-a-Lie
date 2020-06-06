@@ -1,4 +1,4 @@
-import lang.stride.*;
+ import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
 import java.io.*;
@@ -8,10 +8,10 @@ import java.io.*;
  */
 public class Chell extends Actor
 {
-    private Maze1 maze1 = new Maze1(50,50);
     private int direccion;
-    public int x;
-    public int y;
+    private int x;
+    private int y;
+    private int chellPos;
     /**
      * Act - do whatever the Chell wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
@@ -84,8 +84,18 @@ public class Chell extends Actor
             pw.println(x);
             pw.println(y);
             
-            if(maze1.getExe() == true){
-                pw.println("asd");
+            switch(chellPos){
+                case 1:
+                pw.println(1);
+                break;
+                
+                case 2:
+                pw.println(2);
+                break;
+                
+                case 3:
+                pw.println(3);
+                break;
             }
         }catch(Exception e){
             e.printStackTrace();
@@ -99,11 +109,27 @@ public class Chell extends Actor
         }
     }
     
-    public int getX(){
+    public int getterX(){
         return x;
     }
     
-    public int getY(){
+    public int getterY(){
         return y;
+    }
+    
+    public void setchellPos(int chellPos){
+        this.chellPos = chellPos;
+    }
+    
+    public int getchellPos(){
+        return chellPos;
+    }
+    
+    public void setX(int x){
+        this.x = x;
+    }
+    
+    public void setY(int y){
+        this.y = y;
     }
 }

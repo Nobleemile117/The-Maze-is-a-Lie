@@ -17,7 +17,7 @@ public class Maze2 extends World
     public Maze2(int x,int y)
     {
         super(770, 630, 1);
-        createMaze2(x,y);
+        CreateMaze("Maze2.txt",x,y);
         addObject(Stopwatch.getInstance(), 50, 50);
     }
 
@@ -26,16 +26,15 @@ public class Maze2 extends World
         Stopwatch.getInstance().start();
     }
     
-    public void createMaze2(int x,int y)
-    {   
-
-        int punterox=0;
-        int punteroy=0;
-
-        try(FileReader fileReader = new FileReader("Maze2.txt"))
+    public void CreateMaze(String file,int x,int y){
+        addObject(chell,x,y);
+        chell.setchellPos(2);
+        try(FileReader fileReader = new FileReader(file))
         {
             char[] ayuda = new char[1];
-
+            int punterox = 0;
+            int punteroy = 0;
+            
             int caracterLeido = fileReader.read(ayuda);
             while(caracterLeido != -1){
                 switch(ayuda[0]){ 
@@ -54,13 +53,8 @@ public class Maze2 extends World
                     punteroy+=35;
                     break;
                     
-                    case '4':
-                    addObject(new Chell(), punterox, punteroy); 
-                    punterox+=35;
-                    break;
-                    
                     case '5':
-                    addObject(new PortalRojo2(),punterox,punteroy);
+                    addObject(new PortalAzul22(),punterox,punteroy);
                     punterox+=35;
                     break;
 

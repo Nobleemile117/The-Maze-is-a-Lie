@@ -68,25 +68,16 @@ public class Menu extends World
         puntero.setLocation(165, 250 + (opcion * 100));
 
         if (Greenfoot.isKeyDown("SPACE") || Greenfoot.isKeyDown("ENTER")) {
-            switch (opcion) {
+            switch (opcion){
                 case 1 : 
                 theme.stop();
                 Greenfoot.stop();
-
                 break;
 
-                /*case 2 : {
-                Greenfoot.setWorld( new  Leaderboards());
-
-                break;
-                }*/
                 case 0 : 
-
                 theme.stop();
-                Greenfoot.setWorld( new  Maze1(50,50));
-
+                Greenfoot.setWorld(new Maze1(40,75));
                 break;
-
             }
         }
         if(Greenfoot.mouseClicked(leaderboard)){
@@ -99,40 +90,32 @@ public class Menu extends World
         }
         if(Greenfoot.mouseClicked(load)){
             theme.stop();
-            File archivo = null;
-            FileReader fr = null;
-            BufferedReader br = null;
-            
-            try{
-                archivo = new File("Save.txt");
-                if(archivo != null){
-                    fr = new FileReader(archivo);
-                    br = new BufferedReader(fr);
-                    
-                    int linea;
-                    String lineaString;
-                    linea = br.read();
-                    chell.x = linea;
-                    linea = br.read();
-                    chell.y = linea;
-                    
-                    lineaString = br.readLine();
-                    if(lineaString == "asd"){
-                        Greenfoot.setWorld(new Maze1(chell.x,chell.y));
+            try(FileReader fileReader = new FileReader("Save.txt")){
+                if(fileReader != null){
+                    String ayuda = new String();
+
+                    chell.setX(fileReader.read());
+                    chell.setY(fileReader.read());
+                    System.out.println(chell.getterX());
+                    System.out.println(chell.getterY());
+                    chell.setchellPos(fileReader.read());
+                    System.out.println(chell.getchellPos());
+                    if(chell.getchellPos() == 1){
+                        Greenfoot.setWorld(new Maze1(chell.getterX(),chell.getterY()));
                     }
-                }
-            } catch(Exception e){
+                    else{
+                        if(chell.getchellPos() == 2){
+                            Greenfoot.setWorld(new Maze2(chell.getterX(),chell.getterY()));
+                        }
+                        else{
+                            Greenfoot.setWorld(new Maze3(chell.getterX(),chell.getterY()));
+                        }
+                    }
+                }   
+            } 
+            catch(Exception e){
                 e.printStackTrace();
-            }finally{
-                try{
-                    if(null != fr){
-                        fr.close();
-                    }
-                }catch(Exception e2){
-                    e2.printStackTrace();
-                }
             }
         }
     }
-
 }
